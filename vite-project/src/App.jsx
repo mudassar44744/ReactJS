@@ -2,46 +2,43 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Template, { Header,Footer } from './Components/Template'
+import PropsEvents from './Components/PropsEvents'
 
 function App() {
-  function test() {
-    return "Hellow wordl"
+  const [count, setCount] = useState(0)
+  let data = [{
+    id : 1,
+    name : "mudassar",
+    age : 30
+  },
+  {
+    id : 2,
+    name : "muqaddas",
+    age : 32
   }
+  ]
   return (
     <>
-    <h1>{test()}</h1>
+    {/* <ul>
+     {data.map((item)=>{ 
+      return (     
+    <li key={item.id}>
+     <Template data={item} content={
+      <p>This is content</p>
+     } 
+     >
+      <span>This is text of children</span>
+     </Template>
+    </li> 
+     )})} 
+    </ul> */}
+    <PropsEvents/>
     </>
   )
 }
 
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <h1>Hello World!</h1>
-//       {/* <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p> */}
-//     </>
-//   )
-// }
 
 export default App
+
+
